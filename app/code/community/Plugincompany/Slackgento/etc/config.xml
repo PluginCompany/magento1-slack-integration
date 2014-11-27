@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright (c) 2014-2026 Plugin Company
+ *
+ * This file is part of Slack Integration, released under the MIT License.
+ * See the LICENSE file in the project root.
+ */
+-->
+<config>
+    <modules>
+        <Plugincompany_Slackgento>
+            <version>1.0.0</version>
+        </Plugincompany_Slackgento>
+    </modules>
+    <global>
+        <models>
+            <plugincompany_slackgento>
+                <class>Plugincompany_Slackgento_Model</class>
+                <resourceModel>plugincompany_slackgento_resource</resourceModel>
+            </plugincompany_slackgento>
+            <plugincompany_slackgento_resource>
+                <class>Plugincompany_Slackgento_Model_Resource</class>
+            </plugincompany_slackgento_resource>
+        </models>
+        <helpers>
+            <plugincompany_slackgento>
+                <class>Plugincompany_Slackgento_Helper</class>
+            </plugincompany_slackgento>
+        </helpers>
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <plugincompany_slackgento>
+                        <type>model</type>
+                        <class>plugincompany_slackgento/observer</class>
+                        <method>salesOrderPlaceAfter</method>
+                    </plugincompany_slackgento>
+                </observers>
+            </sales_order_place_after>
+        </events>
+    </global>
+    <default>
+        <plugincompany_slackgento>
+            <order_notifications>
+                <enable>1</enable>
+                <channel>#general</channel>
+                <user>Magento</user>
+                <emoji>:magento:</emoji>
+            </order_notifications>
+        </plugincompany_slackgento>
+    </default>
+</config>

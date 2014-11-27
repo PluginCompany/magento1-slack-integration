@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright (c) 2014-2026 Plugin Company
+ *
+ * This file is part of Slack Integration, released under the MIT License.
+ * See the LICENSE file in the project root.
+ */
+-->
+<config>
+    <tabs>
+        <plugincompany translate="label" module="plugincompany_slackgento">
+            <label>Plugin Company</label>
+            <sort_order>20000</sort_order>
+        </plugincompany>
+    </tabs>
+    <sections>
+        <plugincompany_slackgento translate="label" module="plugincompany_slackgento">
+            <class>separator-top</class>
+            <label>Slack Integration Settings</label>
+            <tab>plugincompany</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label" module="plugincompany_slackgento">
+                    <label>General Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <apikey translate="label">
+                            <label>WebHook URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Enter your Incoming WebHook URL, which can be obtained after logging in to your Slack account (please refer to our user manual for detailed instructions).</comment>
+                        </apikey>
+                    </fields>
+                </general>
+                <order_notifications translate="label" module="plugincompany_slackgento">
+                    <label>Order Notifications Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <enable translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Select 'Yes' to receive order notifications in Slack.</comment>
+                        </enable>
+                        <channel translate="label">
+                            <label>Post to Slack channel</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Including #, for example #general. (This will overrule the channel provided when setting up the WebHook URL in Slack.)</comment>
+                        </channel>
+                        <user translate="label">
+                            <label>Slack user name</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>User name to be displayed for incoming order notifications in Slack.</comment>
+                        </user>
+                        <emoji translate="label">
+                            <label>Emoji avatar</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>The Emoji icon to be used as the Slack user's avatar. Enter :magento: for a custom Magento icon.</comment>
+                        </emoji>
+                    </fields>
+                </order_notifications>
+            </groups>
+        </plugincompany_slackgento>
+    </sections>
+</config>
+
